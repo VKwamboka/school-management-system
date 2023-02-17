@@ -1,0 +1,22 @@
+.form-input{
+    /* padding-left: 30%; */
+    margin: 40px;
+    border: 1px solid black;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    margin: 10px;
+    display: flex;
+    gap:10px;
+}
+.input label{
+    width: 100px;
+}
+.input input{
+    padding: 10px;
+}

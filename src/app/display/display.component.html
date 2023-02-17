@@ -1,0 +1,14 @@
+<div class="display" *ngIf="data.length > 0; else none">
+    <h3>Student Details</h3>
+    <div class="content" *ngFor="let student of data; let i=index" ngClass="">
+        <h4>{{student.name}}</h4>
+        <p>{{student.course}}</p>
+        <p>{{student.fee}}</p>
+        <p>{{student.balance}}</p>
+      
+    </div>
+</div>
+
+<ng-template #none>
+    <p>No students to display!!</p>
+</ng-template>
