@@ -1,13 +1,14 @@
 
 
 .balance{
-    background-color: burlywood;
-    color: black;
+    color: red;
+    font-weight: bold;
+   
 }
 
 .nobalance{
-    color: red;
-    font-weight: bold;
+    background-color: burlywood;
+    color: black; 
 }
 table {
     border-collapse: collapse;

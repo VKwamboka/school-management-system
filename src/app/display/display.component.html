@@ -1,6 +1,6 @@
 <div class="display" *ngIf="data.length > 0; else none">
     <h3 style="text-align: center;">Student Details</h3>
-    <div class="content"  ngClass="">
+    <div class="content"  >
         <div style="overflow-x: auto; ">
             <table>
               <tr>
@@ -9,11 +9,15 @@
                 <th>Fee Amount</th>
                 <th>Fee Balance</th>
               </tr>
-              <tr *ngFor="let student of data; let i=index" class="tdata">     
-                <td> <h4>{{student.name}}</h4></td>
-                <td><p>{{student.course}}</p></td>
-                <td><p>{{student.fee}}</p></td>
-                <td><p>{{student.balance}}</p></td>               
+
+              <tr *ngFor="let student of data; let i=index" class="tdata" [ngClass]="{balance:student.balance !='0'}"> 
+                
+                  <td> <h4>{{student.name}}</h4></td>
+                  <td><p>{{student.course}}</p></td>
+                  <td><p>{{student.fee}}</p></td>
+                  <td><p>{{student.balance}}</p></td>               
+                 
+               
               </tr>             
             
             </table>
