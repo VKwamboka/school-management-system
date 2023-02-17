@@ -1,7 +1,7 @@
 <div class="display" *ngIf="data.length > 0; else none">
     <h3 style="text-align: center;">Student Details</h3>
-    <div class="content" *ngFor="let student of data; let i=index" ngClass="">
-        <div style="overflow-x: auto;">
+    <div class="content"  ngClass="">
+        <div style="overflow-x: auto; ">
             <table>
               <tr>
                 <th>Student Name</th>
@@ -9,7 +9,7 @@
                 <th>Fee Amount</th>
                 <th>Fee Balance</th>
               </tr>
-              <tr>     
+              <tr *ngFor="let student of data; let i=index" class="tdata">     
                 <td> <h4>{{student.name}}</h4></td>
                 <td><p>{{student.course}}</p></td>
                 <td><p>{{student.fee}}</p></td>
