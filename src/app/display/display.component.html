@@ -1,10 +1,23 @@
 <div class="display" *ngIf="data.length > 0; else none">
-    <h3>Student Details</h3>
+    <h3 style="text-align: center;">Student Details</h3>
     <div class="content" *ngFor="let student of data; let i=index" ngClass="">
-        <h4>{{student.name}}</h4>
-        <p>{{student.course}}</p>
-        <p>{{student.fee}}</p>
-        <p>{{student.balance}}</p>
+        <div style="overflow-x: auto;">
+            <table>
+              <tr>
+                <th>Student Name</th>
+                <th>Course</th>
+                <th>Fee Amount</th>
+                <th>Fee Balance</th>
+              </tr>
+              <tr>     
+                <td> <h4>{{student.name}}</h4></td>
+                <td><p>{{student.course}}</p></td>
+                <td><p>{{student.fee}}</p></td>
+                <td><p>{{student.balance}}</p></td>               
+              </tr>             
+            
+            </table>
+          </div>
       
     </div>
 </div>
