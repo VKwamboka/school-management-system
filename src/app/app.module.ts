@@ -6,13 +6,15 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { DisplayComponent } from './display/display.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentDetailsComponent,
     NavbarComponent,
-    DisplayComponent
+    DisplayComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,6 @@ export class AppComponent {
   }]
   
   AddStudent(event:{name:string, course:string, fee:string, balance:string}){
-    this.data.push({name: event.name, course: event.course, fee: event.fee, balance: event.balance })
+    this.data.push({name: event.name, course: event.course,  fee: event.fee, balance: event.balance })
   }
 }
