@@ -10,10 +10,7 @@ export class FilterPipe implements PipeTransform {
     if (!items) return [];
     for (let student in items) {
       // let bal = student.b
-      if () {
-        
-        
-      }
+      
     }
     let balance = items.filter((student) => (student.balance !=0));
     let nobalance = items.filter((student) => (student.balance === "0"));

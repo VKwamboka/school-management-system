@@ -25,7 +25,9 @@ table {
 }  
 
 
-
+td button{
+  padding: 5px;
+}
 
 .display{
     margin: 100px;
