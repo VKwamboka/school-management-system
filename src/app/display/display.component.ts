@@ -1,11 +1,22 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Student } from '../Interface';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-display',
   templateUrl: './display.component.html',
   styleUrls: ['./display.component.css']
 })
-export class DisplayComponent {
+export class DisplayComponent implements OnInit{
 @Input() data!:{name:string, course:string, fee:string, balance:string}[]
+
+students:Student[]=[]
+constructor(private studentService:StudentService){
+  this.students = this.studentService.getStudents()
+}
+
+ngOnInit(): void {
+  
+}
 // nodata=""
 }

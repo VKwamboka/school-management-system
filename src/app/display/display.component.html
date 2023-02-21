@@ -5,12 +5,12 @@
             <table>
               <tr>
                 <th>Student Name</th>
-                <th>Course</th>
-                <th>Fee Amount</th>
+                <th>RegNo</th>
                 <th>Fee Balance</th>
+                <th>Profile</th>
               </tr>
 
-              <tr *ngFor="let student of data; let i=index" class="tdata" [ngClass]="{balance:student.balance !='0'}"> 
+              <!-- <tr *ngFor="let student of data; let i=index" class="tdata" [ngClass]="{balance:student.balance !='0'}"> 
                 
                   <td> <h4>{{student.name}}</h4></td>
                   <td><p>{{student.course}}</p></td>
@@ -18,7 +18,17 @@
                   <td><p>{{student.balance}}</p></td>               
                  <td><button>Update</button></td>
                
-              </tr>             
+              </tr>              -->
+              <tr *ngFor="let student of students; let i=index" class="tdata" [ngClass]=""> 
+                
+                <td> <h4>{{student.name}}</h4></td>
+                <td><p>{{student.regNo}}</p></td>
+                <td><p>{{student.balance}}</p></td>
+                <!-- <td><p>{{student.image}}</p></td>                -->
+                <td><img src="{{student.image}}" alt="student"></td>
+               <td><button>Update</button></td>
+             
+            </tr>   
             
             </table>
           </div>
