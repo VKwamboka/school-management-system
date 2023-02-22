@@ -19,4 +19,7 @@ ngOnInit(): void {
   
 }
 // nodata=""
+OnUpdate(reg:string){
+
+}
 }

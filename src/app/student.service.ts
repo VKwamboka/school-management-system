@@ -17,4 +17,8 @@ private students:Student[]=[{
   getStudents(){
     return this.students
   }
+
+  addStudent(){
+    
+  }
 }

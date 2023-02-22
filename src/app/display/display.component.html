@@ -21,12 +21,12 @@
               </tr>              -->
               <tr *ngFor="let student of students; let i=index" class="tdata" [ngClass]=""> 
                 
-                <td> <h4>{{student.name}}</h4></td>
-                <td><p>{{student.regNo}}</p></td>
-                <td><p>{{student.balance}}</p></td>
-                <!-- <td><p>{{student.image}}</p></td>                -->
                 <td><img src="{{student.image}}" alt="student"></td>
-               <td><button>Update</button></td>
+                <td><p>{{student.name}}</p></td>
+                <td><p>{{student.balance}}</p></td>
+                <td><p>{{student.regNo}}</p></td>               
+               
+               <td><button (click)="OnUpdate(student.regNo)">Update</button></td>
              
             </tr>   
             
