@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Student } from '../Interface';
 import { StudentService } from '../student.service';
 
@@ -8,7 +8,8 @@ import { StudentService } from '../student.service';
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent implements OnInit{
-@Input() data!:{name:string, course:string, fee:string, balance:string}[]
+// @Input() data!:{name:string, course:string, fee:string, balance:string}[]
+@Output() sendData = new EventEmitter<{reg:string}>()
 
 students:Student[]=[]
 constructor(private studentService:StudentService){
@@ -20,6 +21,6 @@ ngOnInit(): void {
 }
 // nodata=""
 OnUpdate(reg:string){
-
+this.sendData.emit({reg})
 }
 }
